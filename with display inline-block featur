@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>YouTube.com Clone</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+
+.search-bar{
+    margin-bottom: 10px;
+    display: block;
+
+}
+    p{
+        font-family: 'Roboto', sans-serif;
+        margin-top: 0px;
+        margin-bottom: 0px;
+   }
+   .video-preview{
+    width: 300px;
+    vertical-align: top;
+    display: inline-block;
+    margin-left: 10px;
+   } 
+   .thumbnail{
+    width: 100%;
+   }
+   .thumbnail-row{
+    margin-bottom: 9px;
+   }
+
+   .channel-profile{
+    width: 40px;
+    display: inline-block;
+   }
+   .profile-pic{
+    width: 100%;
+    vertical-align: top;
+    border-radius: 50px;
+    
+
+   }
+   .video-info{
+    width: 240px;
+    display: inline-block;
+    vertical-align: top;
+   margin-left: 10px;
+    
+   }
+   .video-title{
+    font-size: 14.5px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 12px;
+   }
+   
+   .video-author,
+   .video-stats{
+    font-size: 12px;
+    color: rgb(96, 96, 96);
+    margin-bottom: 4px;
+   }
+   
+</style>
+</head>
+<body>
+    <input class="search-bar" type="text" placeholder="Search">
+    <!--placeholder is preset text written in the box
+    input type can be of different types such as text, 
+    checkbox range,etc-->
+
+    <div class="video-preview">
+        <div class="thumbnail-row">
+            <img class="thumbnail" src="https://i.ytimg.com/vi/VFrP9BHhxPA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCu3G8UgMYmhWe83HdEZ4XAd_Ufhg">
+        </div>
+    <div>    
+            <div class="channel-profile">
+                <img class="profile-pic" src="profiles/profile1.jpg">
+            </div>
+            <div class="video-info">
+
+                <p class="video-title">Kahani Suno 2.0 | Kaifi Khalil | Lyrics</p>
+                <p class="video-author">Lofi 3:00AM</p>
+                <p class="video-stats">8.1M views &#183 11 months ago </p>
+            </div>
+    </div>
+    </div>
+
+    <div class="video-preview">
+        <div class="thumbnail-row">
+            <img class="thumbnail" src="https://i.ytimg.com/vi/NeXbmEnpSz0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC7GwCNAMSrtCvDi6ch8h_hmj_OLw">
+
+        </div>
+    <div>    
+            <div class="channel-profile">
+                <img class="profile-pic" src="profiles/profile2.jpg">
+            </div>
+            <div class="video-info">
+
+                <p class="video-title">Zara Zara Bahekta Hai | JalRaj | RHTDM | Male Version | Latest Hindi Cover 2020</p>
+                <p class="video-author">JalRaj</p>
+                <p class="video-stats">239M views   &#183 3 years ago </p>
+            </div>
+    </div>
+    </div>
+
+    <div class="video-preview">
+        <div class="thumbnail-row">
+            <img class="thumbnail" src="thumbnails/thumbnail-3.webp">
+
+        </div>
+    <div>    
+            <div class="channel-profile">
+                <img class="profile-pic" src="profiles/channel-3.jpeg">
+            </div>
+            <div class="video-info">
+
+                <p class="video-title">
+                    Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                <p class="video-author">Marques Brownlee</p>
+                <p class="video-stats">3.4M views · 6 months ago</p>
+            </div>
+    </div>
+    </div>
+    <div class="video-preview">
+        <div class="thumbnail-row">
+            <img class="thumbnail" src="thumbnails/thumbnail-4.webp">
+
+        </div>
+    <div>    
+            <div class="channel-profile">
+                <img class="profile-pic" src="profiles/channel-4.jpeg">
+            </div>
+            <div class="video-info">
+
+                <p class="video-title">
+                    Try Not To Laugh Challenge #9</p>
+                <p class="video-author">Markiplier</p>
+                <p class="video-stats">19M views · 4 years ago</p>
+            </div>
+    </div>
+    </div>
+
+    <div class="video-preview">
+        <div class="thumbnail-row">
+            <img class="thumbnail" src="thumbnails/thumbnail-5.webp">
+
+        </div>
+    <div>    
+            <div class="channel-profile">
+                <img class="profile-pic" src="profiles/channel-5.jpeg">
+            </div>
+            <div class="video-info">
+
+                <p class="video-title">Crazy Tik Toks Taken Moments Before DISASTER</p>
+                <p class="video-author">SSSniperWolf</p>
+                <p class="video-stats">12M views · 1 year ago</p>
+            </div>
+    </div>
+    </div>
+
+    <div class="video-preview">
+        <div class="thumbnail-row">
+            <img class="thumbnail" src="thumbnails/thumbnail-6.webp">
+
+        </div>
+    <div>    
+            <div class="channel-profile">
+                <img class="profile-pic" src="profiles/channel-6.jpeg">
+            </div>
+            <div class="video-info">
+
+                <p class="video-title">The Simplest Math Problem No One Can Solve - Collatz Conjecture</p>
+                <p class="video-author">Veritasium</p>
+                <p class="video-stats">18M views · 4 months ago</p>
+            </div>
+    </div>
+    </div>
+
+    <div class="video-preview">
+        <div class="thumbnail-row">
+            <img class="thumbnail" src="thumbnails/thumbnail-7.webp">
+
+        </div>
+    <div>    
+            <div class="channel-profile">
+                <img class="profile-pic" src="profiles/channel-7.jpeg">
+            </div>
+            <div class="video-info">
+
+                <p class="video-title">What would happen if you didn’t drink water? - Mia Nacamulli</p>
+                <p class="video-author">TED-Ed</p>
+                <p class="video-stats">12M views · 5 years ago</p>
+            </div>
+    </div>
+    </div>
+
+    <div class="video-preview">
+        <div class="thumbnail-row">
+            <img class="thumbnail" src="thumbnails/thumbnail-8.webp">
+
+        </div>
+    <div>    
+            <div class="channel-profile">
+                <img class="profile-pic" src="profiles/channel-8.jpeg">
+            </div>
+            <div class="video-info">
+
+                <p class="video-title">The SECRET to Super Human STRENGTH </p>
+                <p class="video-author">ThenX</p>
+                <p class="video-stats">20M views · 3 year ago</p>
+            </div>
+    </div>
+    </div>
+
+    <div class="video-preview">
+        <div class="thumbnail-row">
+            <img class="thumbnail" src="thumbnails/thumbnail-9.webp">
+
+        </div>
+    <div>    
+            <div class="channel-profile">
+                <img class="profile-pic" src="profiles/channel-9.jpeg">
+            </div>
+            <div class="video-info">
+
+                <p class="video-title">Dubai's Crazy Underwater Train and Other Things #Only in Dubai</p>
+                <p class="video-author">Destination Tips</p>
+                <p class="video-stats">3M views · 1 year ago</p>
+            </div>
+    </div>
+    </div>
+
+    <div class="video-preview">
+        <div class="thumbnail-row">
+            <img class="thumbnail" src="thumbnails/thumbnail-10.webp">
+
+        </div>
+    <div>    
+            <div class="channel-profile">
+                <img class="profile-pic" src="profiles/channel-10.jpeg">
+            </div>
+            <div class="video-info">
+
+                <p class="video-title">Kadane's Algorithm to Maximum Sum Subarray Problem</p>
+                <p class="video-author">CS Dojo</p>
+                <p class="video-stats">519K views · 5 years ago</p>
+            </div>
+    </div>
+    </div>
+
+    <div class="video-preview">
+        <div class="thumbnail-row">
+            <img class="thumbnail" src="thumbnails/thumbnail-11.webp">
+
+        </div>
+    <div>    
+            <div class="channel-profile">
+                <img class="profile-pic" src="profiles/channel-11.jpeg">
+            </div>
+            <div class="video-info">
+
+                <p class="video-title">How The World's Largest Cruise Ship Makes 30,000 Meals Every Day</p>
+                <p class="video-author">Business Insider</p>
+                <p class="video-stats">14M views · 1 year ago</p>
+            </div>
+    </div>
+    </div>
+
+    <div class="video-preview">
+        <div class="thumbnail-row">
+            <img class="thumbnail" src="thumbnails/thumbnail-12.webp">
+
+        </div>
+    <div>    
+            <div class="channel-profile">
+                <img class="profile-pic" src="profiles/channel-12.jpeg">
+            </div>
+            <div class="video-info">
+
+                <p class="video-title">Inside The World's Biggest Passenger Plane</p>
+                <p class="video-author">Tech Vision</p>
+                <p class="video-stats">3.7M views · 10 months ago</p>
+            </div>
+    </div>
+    </div>
+
+
+
+
+
+</body>
+</html>
