@@ -5,19 +5,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="youtube.css">
 <style>
 
-.search-bar{
-    margin-bottom: 10px;
-    display: block;
-
-}
-    p{
-        font-family: 'Roboto', sans-serif;
-        margin-top: 0px;
-        margin-bottom: 0px;
+p{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0px;
+    margin-bottom: 0px;
    }
-  
+  body{
+    margin: 0px;
+  }
    .thumbnail{
     width: 100%;
    }
@@ -28,7 +26,6 @@
    .vid-info-grid{
     display: grid;
     grid-template-columns: 50px 1fr;
-
    }
 
    .vid-grid{
@@ -38,8 +35,6 @@
     row-gap: 30px;
    }
 
-
-  
    .profile-pic{
     width: 40px;
     border-radius: 50px;
@@ -59,13 +54,143 @@
     margin-bottom: 4px;
    }
    
+   .search-bar{
+    height: 35px;
+    flex: 1;
+    width:0;
+    /*so that the search bar shrinks as much as we want*/
+   border-color: rgb(185, 185, 185);
+    padding-left: 12px;
+    border-style:ridge;
+    border-width:1px;
+    border-radius: 2px;
+    box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.02);
+ }
+ .header{
+     height:55px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     /*this is used so that each element is spread evenly on their side
+     right stays on right most left stay on left most*/
+     
+ }
+    .middle-section{
+     display: flex;
+     flex: 1;
+     align-items: center;
+     margin-right: 35px;
+     margin-left: 60px;
+     max-width: 480px;
+     
+ 
+    }
+ 
+ .left-section{
+     display: flex;
+     align-items: center; 
+ /*all the elements in the div will be aligned at the centre*/
+ 
+ 
+ }
+ 
+ .right-section{
+ 
+ width: 180px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding-right: 22px;
+ flex-shrink: 0;
+ /* doesnt let the space between the icons shrink*/
+ 
+ }
+ .ham {
+   height: 24px;
+   margin-left: 24px;
+   margin-right: 24px;
+ }
+ 
+ .youtube {
+   height: 20px;
+ }
+ .search{
+     width: 62px;
+     height: 39px;
+     border-style: solid;
+     border-width: 1px;
+     border-color:rgb(185, 185, 185); 
+     margin-left: -2px;
+     background-color: rgb(247, 246, 246);
+     
+ }
+ .voice-search{
+     width: 40px;
+     height: 39px;
+     margin-left:12px ;
+     border-style: none;
+     border-radius: 20px;
+     background-color: rgb(250, 250, 250);
+ }
+ .search-bar::placeholder{
+     font-family: 'Roboto', sans-serif;
+     font-size: 16px;
+     color: gray;
+ }
+ .search-icon{
+     width: 25px;
+ }
+ .voice-search-icon{
+     width: 24px;
+ 
+ }
+ .upload{
+     width: 24px;
+ }
+ .apps{
+     width: 24px;
+ }
+ .noti{
+     width: 24px;
+ }
+ .pro-pic{
+     width: 35px;
+     border-radius: 20px;
+ }
 </style>
 </head>
 <body>
-    <input class="search-bar" type="text" placeholder="Search">
-        <!--placeholder is preset text written in the box
-        input type can be of different types such as text, 
-        checkbox range,etc-->
+    <div class="header">
+        <div class="left-section"> 
+            <img class="ham" src="icons/hamburger-menu.svg">
+            <img class="youtube" src="icons/youtube-logo.svg">
+        </div>
+
+        <div class="middle-section">
+            <input class="search-bar" type="text" placeholder="Search">
+            <!--placeholder is preset text written in the box
+            input type can be of different types such as text, 
+            checkbox range,etc-->
+        <button class="search">
+            <img class="search-icon" src="icons/search.svg">
+        </button>
+        <button class="voice-search">
+            <img class="voice-search-icon" src="icons/voice-search-icon.svg">
+        </button>
+        
+        </div>
+        
+        <div class="right-section">
+            <img class="upload" src="icons/upload.svg">
+            <img class="apps" src="icons/youtube-apps.svg">
+            <img class="noti" src="icons/notifications.svg">
+            <img class="pro-pic" src="profiles/channel-4.jpeg">
+
+        </div>
+
+
+
+    </div>
     
     <div class="vid-grid">
         
@@ -283,5 +408,6 @@
         </div>
 
     </div>
+    
 </body>
 </html>
