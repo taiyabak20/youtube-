@@ -2,161 +2,349 @@
 <html>
 <head>
 <title>YouTube.com Clone</title>
+<link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/174/174883.png?w=826&t=st=1690848880~exp=1690849480~hmac=12b948675c5a7fab51309c3c17dc9edd3c7e5a41ad17f6cc870a835816ea3ead">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="youtube.css">
+
 <style>
 
 p{
-    font-family: 'Roboto', sans-serif;
-    margin-top: 0px;
-    margin-bottom: 0px;
-   }
-  body{
-    margin: 0px;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 0px;
+  margin-bottom: 0px;
+ }
+body{
+  margin: 0px;
+}
+ .thumbnail{
+  width: 100%;
+  position: relative;
+ }
+ .thumbnail-row{
+  margin-bottom: 9px;
+  position: relative;
+  
+ }
+
+ .vid-info-grid{
+  display: grid;
+  grid-template-columns: 50px 1fr;
+ }
+
+ .vid-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 14px;
+  row-gap: 30px;
+ }
+@media(max-width:750px){
+  .vid-grid{
+    grid-template-columns: 1fr 1fr;
   }
-   .thumbnail{
-    width: 100%;
-   }
-   .thumbnail-row{
-    margin-bottom: 9px;
-   }
+}
 
-   .vid-info-grid{
-    display: grid;
-    grid-template-columns: 50px 1fr;
-   }
+@media(min-width:1000px){
+  .vid-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
 
-   .vid-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 14px;
-    row-gap: 30px;
-   }
+@media(max-width:700px){
+  .vid-grid{
+   grid-template-columns: 1fr;
+  }
+}
+ .profile-pic{
+  width: 35px;
+  border-radius: 50px;
+  }
 
-   .profile-pic{
-    width: 40px;
-    border-radius: 50px;
-    }
+ .video-title{
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 12px;
+ }
  
-   .video-title{
-    font-size: 14.5px;
-    font-weight: 500;
-    line-height: 20px;
-    margin-bottom: 12px;
-   }
+ .video-author,
+ .video-stats{
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+  margin-bottom: 4px;
+ }
+ 
+ .search-bar{
+  height: 35px;
+  flex: 1;
+  width:0;
+  /*so that the search bar shrinks as much as we want*/
+ border-color: rgb(185, 185, 185);
+  padding-left: 12px;
+  border-style:ridge;
+  border-width:1px;
+  border-radius: 2px;
+  box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.02);
+}
+.header{
+   height:60px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   /*this is used so that each element is spread evenly on their side
+   right stays on right most left stay on left most*/
+   position: fixed;
+   /*make the header stick to the top even when we scroll the page*/
+   background-color: white;
+   top: 0;
+   right: 0;
+   left: 0;
+   border-bottom-width: 1px;
+   border-bottom-style:solid ;
+   border-bottom-color:rgb(212, 211, 211) ;
+   z-index: 100;
+   /*make it appear on top of all the other elements default value is always 0 
+   to make the element appear on top of the other one value should the greater */
+}
+body{
+ padding-top:85px ;
+ padding-left: 95px;
+ padding-right: 24px;
+ margin: 0;
+ background-color: rgb(248, 248, 248);
+}
+  .middle-section{
+   display: flex;
+   flex: 1;
+   align-items: center;
+   margin-right: 35px;
+   margin-left: 60px;
+   max-width: 480px;
    
-   .video-author,
-   .video-stats{
-    font-size: 12px;
-    color: rgb(96, 96, 96);
-    margin-bottom: 4px;
-   }
+
+  }
+
+.left-section{
+   display: flex;
+   align-items: center; 
+/*all the elements in the div will be aligned at the centre*/
+
+
+}
+
+.right-section{
+
+width: 180px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding-right: 20px;
+flex-shrink: 0;
+/* doesnt let the space between the icons shrink*/
+
+}
+.ham {
+ height: 24px;
+ margin-left: 24px;
+ margin-right: 24px;
+}
+
+.youtube {
+ height: 20px;
+}
+.search{
+   width: 62px;
+   height: 39px;
+   border-style: solid;
+   border-width: 1px;
+   border-color:rgb(185, 185, 185); 
+   margin-left: -2px;
+   background-color: rgb(247, 246, 246);
+   cursor: pointer;
    
-   .search-bar{
-    height: 35px;
-    flex: 1;
-    width:0;
-    /*so that the search bar shrinks as much as we want*/
-   border-color: rgb(185, 185, 185);
-    padding-left: 12px;
-    border-style:ridge;
-    border-width:1px;
-    border-radius: 2px;
-    box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.02);
- }
- .header{
-     height:55px;
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     /*this is used so that each element is spread evenly on their side
-     right stays on right most left stay on left most*/
-     
- }
-    .middle-section{
-     display: flex;
-     flex: 1;
-     align-items: center;
-     margin-right: 35px;
-     margin-left: 60px;
-     max-width: 480px;
-     
+}
+.voice-search{
+   width: 45px;
+   height: 39px;
+   margin-left:12px ;
+   border-style: none;
+   border-radius: 20px;
+   background-color: rgb(250, 250, 250);
+}
+.search-bar::placeholder{
+   font-family: 'Roboto', sans-serif;
+   font-size: 16px;
+   color: gray;
+}
+.search-icon{
+   width: 25px;
+}
+.voice-search-icon{
+   width: 25px;
+
+}
+.upload{
+   width: 24px;
+}
+.apps{
+   width: 24px;
+}
+.noti{
+   width: 24px;
+}
+.pro-pic{
+   width: 35px;
+   border-radius: 20px;
+}
+.sidebar{
+
+  position: fixed;
+  top:60px;
+  bottom:0;
+  left: 0;
+  width:71px;
+  z-index: 101;
+  background-color: white;
+}
+.time{
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 8px;
+  right: 5px;
+  padding: 4px;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  border-radius: 2px;
+}
+.noti-icon{
+position: relative;
+}
+.noti-count{
+position: absolute;
+top: -3px;
+right: -7px;
+background-color: rgb(180, 0, 0);
+border-radius: 30px;
+padding: 2px 5.5px;
+font-size: 9px;
+text-align: center;
+border-style: solid;
+border-color: white;
+font-family: 'Roboto', sans-serif;
+color: white;
+border-width: 2px;
+}
+.sidebar-link{
  
-    }
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+
+}
+
+.sidebar-link:hover{
+  background-color: rgb(233, 232, 232);
+  font-family: arial;
+}
+.sidebar-link img
+ /*like this we can target all the images under the div*/
+ {
+height:25px;
+margin-bottom: 5px;
+}
+.sidebar-link div{
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+}
+.search .tooltip ,
+.voice-search .tooltip{
+  position: absolute;
+  background-color: rgb(161, 161, 161);
+  padding: 8px 5px;
+
+  pointer-events: none;
+ color: white;
+ font-family: 'Roboto', sans-serif;
+ font-weight: 500;
+ opacity: 0;
+ bottom: -25px;
+ transition: opacity 0.3s;
+ border-radius: 2px;
+ white-space: nowrap;
+}
+.search:hover .tooltip,
+.voice-search:hover .tooltip{
+  opacity: 1;
+}
+.search,
+.voice-search{
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  cursor: pointer;
+}
+.upload-icon .tooltip,
+.apps-icon .tooltip,
+.notifi-icon .tooltip{
+  position: absolute;
+  background-color: rgb(161, 161, 161);
+  padding: 8px 5px;
+
+  pointer-events: none;
+ color: white;
+ font-family: 'Roboto', sans-serif;
+ font-weight: 500;
+ opacity: 0;
+ bottom: -20px;
+ transition: opacity 0.2s;
+ border-radius: 2px;
+ white-space: nowrap;
  
- .left-section{
-     display: flex;
-     align-items: center; 
- /*all the elements in the div will be aligned at the centre*/
- 
- 
- }
- 
- .right-section{
- 
- width: 180px;
- display: flex;
- align-items: center;
- justify-content: space-between;
- padding-right: 22px;
- flex-shrink: 0;
- /* doesnt let the space between the icons shrink*/
- 
- }
- .ham {
-   height: 24px;
-   margin-left: 24px;
-   margin-right: 24px;
- }
- 
- .youtube {
-   height: 20px;
- }
- .search{
-     width: 62px;
-     height: 39px;
-     border-style: solid;
-     border-width: 1px;
-     border-color:rgb(185, 185, 185); 
-     margin-left: -2px;
-     background-color: rgb(247, 246, 246);
-     
- }
- .voice-search{
-     width: 40px;
-     height: 39px;
-     margin-left:12px ;
-     border-style: none;
-     border-radius: 20px;
-     background-color: rgb(250, 250, 250);
- }
- .search-bar::placeholder{
-     font-family: 'Roboto', sans-serif;
-     font-size: 16px;
-     color: gray;
- }
- .search-icon{
-     width: 25px;
- }
- .voice-search-icon{
-     width: 24px;
- 
- }
- .upload{
-     width: 24px;
- }
- .apps{
-     width: 24px;
- }
- .noti{
-     width: 24px;
- }
- .pro-pic{
-     width: 35px;
-     border-radius: 20px;
- }
+}
+
+.upload-icon:hover .tooltip,
+.apps-icon:hover .tooltip,
+.notifi-icon:hover .tooltip{
+  opacity: 1;
+}
+.upload-icon,
+.apps-icon,
+.notifi-icon{
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+
+}
+.upload-icon, .apps-icon, .notifi-icon{
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  cursor: pointer;
+}
+.notifi-icon .tooltip{
+  bottom: -35px;
+}
+
+a{
+  font-style: normal;
+  color: black;
+  text-decoration: none;
+  /*to remove underline fron the links*/
+  
+}
+.search-bar:focus {
+  border: 1px solid blue;
+  outline: none; /* This removes the default focus outline in some browsers */
+  /* Add any other styles you want to apply when the search bar is in focus */
+}
+
+
+
 </style>
 </head>
 <body>
@@ -173,17 +361,44 @@ p{
             checkbox range,etc-->
         <button class="search">
             <img class="search-icon" src="icons/search.svg">
+            <div class="tooltip">
+                Search
+            </div>
         </button>
         <button class="voice-search">
             <img class="voice-search-icon" src="icons/voice-search-icon.svg">
+            <div class="tooltip">Search with your voice
+            </div>
         </button>
         
         </div>
         
         <div class="right-section">
-            <img class="upload" src="icons/upload.svg">
-            <img class="apps" src="icons/youtube-apps.svg">
-            <img class="noti" src="icons/notifications.svg">
+            <div class="upload-icon">
+                <img class="upload" src="icons/upload.svg">
+            <div class="tooltip">Create
+            </div>
+            </div>
+
+
+            <div class="apps-icon">
+                <img class="apps" src="icons/youtube-apps.svg">
+                <div class="tooltip">Search
+                </div>
+            </div>
+            
+            <div class="notifi-icon">
+                <div class="noti-icon">
+                    <img class="noti" src="icons/notifications.svg">
+                    <div class="tooltip">Search
+                    </div>
+                    <div class="noti-count">
+                        3
+                    </div>
+                </div>
+            </div>
+            
+            
             <img class="pro-pic" src="profiles/channel-4.jpeg">
 
         </div>
@@ -191,12 +406,54 @@ p{
 
 
     </div>
+    <div class="sidebar">
+        <a href="https://www.youtube.com/">
+        <div class="sidebar-link">
+             <img src="icons/home.svg" alt="">
+                <div>Home</div>
+           
+        </div></a>
+<a href="https://www.youtube.com/feed/trending?bp=6gQJRkVleHBsb3Jl">
+        <div class="sidebar-link">
+            <img src="icons/explore.svg" alt="">
+            <div>Explore</div>
+        </div>
+    </a>
+    <a href="https://www.youtube.com/feed/subscriptions">
+        <div class="sidebar-link">
+            <img src="icons/subscriptions.svg" alt="">
+            <div>Subscriptions</div>
+        </div>
+
+    </a>
+    <a href="https://www.youtube.com/shorts/JeG1iM53j_E">
+        <div class="sidebar-link">
+            <img src="icons/originals.svg" alt="">
+           <div>shorts</div> 
+        </div>
+    </a>
+    <a href="https://music.youtube.com/">
+        <div class="sidebar-link">
+            <img src="icons/youtube-music.svg" alt="">
+            <div>YouTube Music</div>
+        </div>
+    </a>
+        <a href="https://www.youtube.com/feed/library">
+        <div class="sidebar-link">
+            <img src="icons/library.svg" alt="">
+            <div>Library</div>
+        </div>
+    </a>
+    </div>
     
     <div class="vid-grid">
         
         <div class="video-preview">
             <div class="thumbnail-row">
-                <img class="thumbnail" src="https://i.ytimg.com/vi/VFrP9BHhxPA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCu3G8UgMYmhWe83HdEZ4XAd_Ufhg">
+                <a href="https://www.youtube.com/watch?v=VFrP9BHhxPA"><img class="thumbnail" src="https://i.ytimg.com/vi/VFrP9BHhxPA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCu3G8UgMYmhWe83HdEZ4XAd_Ufhg">
+                    <div class="time">5:22</div></a>
+                
+
             </div>
             <div class="vid-info-grid">    
                 <div class="channel-profile">
@@ -210,8 +467,10 @@ p{
     
         <div class="video-preview">
             <div class="thumbnail-row">
-                <img class="thumbnail" src="https://i.ytimg.com/vi/NeXbmEnpSz0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC7GwCNAMSrtCvDi6ch8h_hmj_OLw">
-    
+                <a href="https://www.youtube.com/watch?v=NeXbmEnpSz0"><img class="thumbnail" src="https://i.ytimg.com/vi/NeXbmEnpSz0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC7GwCNAMSrtCvDi6ch8h_hmj_OLw">
+                    <div class="time">5:25</div></a>
+                
+
             </div>
         <div class="vid-info-grid">    
                 <div class="channel-profile">
@@ -228,8 +487,12 @@ p{
     
         <div class="video-preview">
             <div class="thumbnail-row">
-                <img class="thumbnail" src="thumbnails/thumbnail-3.webp">
+                <a href="https://www.youtube.com/watch?v=n2RNcPRtAiY">
+                    <img class="thumbnail" src="thumbnails/thumbnail-3.webp">
+                    <div class="time">14:20</div>
     
+                </a>
+                
             </div>
         <div class="vid-info-grid">    
                 <div class="channel-profile">
@@ -246,8 +509,10 @@ p{
         </div>
         <div class="video-preview">
             <div class="thumbnail-row">
-                <img class="thumbnail" src="thumbnails/thumbnail-4.webp">
-    
+                <a href="https://www.youtube.com/watch?v=mP0RAo9SKZk"> <img class="thumbnail" src="thumbnails/thumbnail-4.webp">
+                    <div class="time">8:22</div></a>
+               
+
             </div>
         <div class="vid-info-grid">    
                 <div class="channel-profile">
@@ -265,7 +530,10 @@ p{
     
         <div class="video-preview">
             <div class="thumbnail-row">
-                <img class="thumbnail" src="thumbnails/thumbnail-5.webp">
+                <a href="https://www.youtube.com/watch?v=FgjPQQeTh1w"><img class="thumbnail" src="thumbnails/thumbnail-5.webp">
+                    <div class="time">9:13
+                    </div></a>
+                
     
             </div>
         <div class="vid-info-grid">    
@@ -283,7 +551,9 @@ p{
     
         <div class="video-preview">
             <div class="thumbnail-row">
-                <img class="thumbnail" src="thumbnails/thumbnail-6.webp">
+                <a href="https://www.youtube.com/watch?v=094y1Z2wpJg"><img class="thumbnail" src="thumbnails/thumbnail-6.webp">
+                    <div class="time">22:09</div></a>
+                
     
             </div>
         <div class="vid-info-grid">    
@@ -301,7 +571,9 @@ p{
     
         <div class="video-preview">
             <div class="thumbnail-row">
-                <img class="thumbnail" src="thumbnails/thumbnail-7.webp">
+                <a href="https://www.youtube.com/watch?v=9iMGFqMmUFs"><img class="thumbnail" src="thumbnails/thumbnail-7.webp">
+                    <div class="time">4:51</div></a>
+                
     
             </div>
         <div class="vid-info-grid">    
@@ -319,7 +591,9 @@ p{
     
         <div class="video-preview">
             <div class="thumbnail-row">
-                <img class="thumbnail" src="thumbnails/thumbnail-8.webp">
+                <a href="https://www.youtube.com/watch?v=ixmxOlcrlUc"><img class="thumbnail" src="thumbnails/thumbnail-8.webp">
+                    <div class="time">13:17</div></a>
+                
     
             </div>
         <div class="vid-info-grid">    
@@ -337,7 +611,9 @@ p{
     
         <div class="video-preview">
             <div class="thumbnail-row">
-                <img class="thumbnail" src="thumbnails/thumbnail-9.webp">
+                <a href="https://www.youtube.com/watch?v=0nZuYyXET3s"><img class="thumbnail" src="thumbnails/thumbnail-9.webp">
+                    <div class="time">4:10</div></a>
+                
     
             </div>
         <div class="vid-info-grid">    
@@ -355,7 +631,9 @@ p{
     
         <div class="video-preview">
             <div class="thumbnail-row">
-                <img class="thumbnail" src="thumbnails/thumbnail-10.webp">
+                <a href="https://www.youtube.com/watch?v=86CQq3pKSUw"><img class="thumbnail" src="thumbnails/thumbnail-10.webp">
+                    <div class="time">11:17</div></a>
+                
     
             </div>
         <div class="vid-info-grid">    
@@ -373,8 +651,10 @@ p{
     
         <div class="video-preview">
             <div class="thumbnail-row">
-                <img class="thumbnail" src="thumbnails/thumbnail-11.webp">
-    
+                <a href="https://www.youtube.com/watch?v=R2vXbFp5C9o"><img class="thumbnail" src="thumbnails/thumbnail-11.webp">
+                    <div class="time">7:53</div>
+        </a>
+                
             </div>
         <div class="vid-info-grid">    
                 <div class="channel-profile">
@@ -391,7 +671,9 @@ p{
     
         <div class="video-preview">
             <div class="thumbnail-row">
-                <img class="thumbnail" src="thumbnails/thumbnail-12.webp">
+                <a href="https://www.youtube.com/watch?v=lFm4EM1juls"><img class="thumbnail" src="thumbnails/thumbnail-12.webp">
+                    <div class="time">7:12</div></a>
+                
     
             </div>
         <div class="vid-info-grid">    
